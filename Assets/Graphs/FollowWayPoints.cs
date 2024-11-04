@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowWayPoints : MonoBehaviour
 {
     Transform goal;
-    float speed = 5.0f;
+    float speed = 10.0f;
     float accuracy = 5.0f;
     float rotSpeed = 2.0f;
 
@@ -34,6 +34,12 @@ public class FollowWayPoints : MonoBehaviour
     public void GoToRuin()
     {
         g.AStar(currentNode, wps[3]);
+        currentWP = 0;
+    }
+
+    public void GoToWater()
+    {
+        g.AStar(currentNode, wps[10]);
         currentWP = 0;
     }
 
